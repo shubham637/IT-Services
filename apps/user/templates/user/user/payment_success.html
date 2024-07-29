@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content-wrapper {
+            max-width: 600px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .card-custom {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+<div class="container content-wrapper">
+    <div class="card card-custom text-center">
+        <div class="card-body">
+            <h2 class="card-title text-success">Payment Successful!</h2>
+            <p class="lead">Thank you for subscribing to {{ service.service_name }}.</p>
+            <p>Your payment has been processed successfully.</p>
+            <a href="{% url 'user-home' %}" class="btn btn-custom mt-3">Go to Home</a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
